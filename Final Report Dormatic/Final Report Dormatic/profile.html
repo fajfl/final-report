@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員資料</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <!-- 漢堡選單 -->
+        <div class="hamburger-menu">
+            <button id="menu-btn">☰</button>
+            <nav id="dropdown-menu" class="hidden">
+                <a href="index.html">首頁</a>
+                <a href="promo.html">促銷活動</a>
+                <a href="about.html">關於我們</a>
+                <a href="contact.html">聯絡我們</a>
+            </nav>
+        </div>
+
+        <!-- 頂部標題 -->
+        <h1>嘻嘻樂器</h1>
+
+        <!-- 樂器種類選單 -->
+        <nav class="nav1">
+            <a href="/Final Report Dormatic/products/products_list1.html">管樂器</a>
+            <a href="/Final Report Dormatic/products/products_list2.html">弦樂器</a>
+            <a href="/Final Report Dormatic/products/products_list3.html">打擊樂器</a>
+            <a href="/Final Report Dormatic/products/products_list4.html">配件</a>
+        </nav>
+
+
+        <!-- 頭像與購物車 -->
+        <div class="header-right">
+            <div class="user-profile">
+                <img id="user-avatar" src="Image/function/account.jfif" alt="會員頭像">
+            </div>
+            <div class="cart">
+                <a href="../Final Report Dormatic/cart.html">
+                    <img src="Image/function/shopping cart.png" alt="購物車" class="cart-icon">
+                    <span id="cart-count" class="cart-count"></span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <form id="profile-form" class="profile-form">
+            <label for="name">姓名：</label>
+            <input type="text" id="name" placeholder="輸入您的姓名" required>
+
+            <label for="phone">電話號碼：</label>
+            <input type="tel" id="phone" placeholder="輸入您的電話號碼" required>
+
+            <label for="address">地址：</label>
+            <input type="text" id="address" placeholder="輸入您的地址" required>
+
+            <label for="credit-card">信用卡號：</label>
+            <input type="text" id="credit-card" placeholder="輸入信用卡號 (VISA/MasterCard)" required>
+
+            <div id="credit-card-extra">
+                <label for="cvc">CVC:</label>
+                <input type="text" id="cvc" placeholder="CVC">
+                <label for="expiry">到期日：</label>
+                <input type="month" id="expiry">
+            </div>
+
+            <label for="profile-pic">頭像上傳：</label>
+            <input type="file" id="profile-pic" accept="image/*">
+
+            <button type="submit">儲存</button>
+        </form>
+    </section>
+
+    <section class="section">
+        <h2>歷史消費紀錄</h2>
+        <div id="purchase-history">
+            <!-- 消費紀錄將動態生成 -->
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>評論紀錄</h2>
+        <div id="review-history">
+            <!-- 評論紀錄將動態生成 -->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 樂器販售網站</p>
+    </footer>
+    <script src="js.js"></script>
+</body>
+
+</html>

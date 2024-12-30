@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員登入與註冊</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        
+        <!-- 漢堡選單 -->
+        <div class="hamburger-menu">
+            <button id="menu-btn">☰</button>
+            <nav id="dropdown-menu" class="hidden">
+                <a href="index.html">首頁</a>
+                <a href="products.html">商品列表</a>
+                <a href="promo.html">促銷活動</a>
+                <a href="about.html">關於我們</a>
+                <a href="contact.html">聯絡我們</a>
+            </nav>
+        </div>
+    </header>
+    <section class="section">
+        <h1 style="text-align: center;">帳號登入/註冊</h1>
+        <!-- 登入/註冊統一表單 -->
+        <form id="auth-form" class="auth-form">
+            <label for="username">帳號：</label>
+            <input type="text" id="username" placeholder="輸入帳號名稱" required>
+            <label for="password">密碼：</label>
+            <input type="password" id="password" placeholder="輸入密碼" required>
+            <button type="submit">登入/註冊</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <p>© 2024 樂器販售網站</p>
+    </footer>
+    <script src="js.js"></script>
+</body>
+</html>
+

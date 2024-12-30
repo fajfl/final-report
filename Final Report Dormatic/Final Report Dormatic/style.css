@@ -1,0 +1,571 @@
+body {
+    background-color: #2d3250;
+    color: #fff;
+}
+
+/* 標題和選單整體樣式 */
+.title-menu {
+    background-color: #424769;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* 標題樣式 */
+.title-menu h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: white;
+}
+
+/* 樂器種類選單樣式 */
+.nav1 {
+    border-radius: 100px;
+    margin-top: 10px;
+    background-color: #676f9d;
+
+}
+
+.nav1 a {
+    padding: 10px 20px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+.nav1 a:hover {
+    background-color: #f9b17a;
+}
+
+/* 標題樣式 */
+.header h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2rem;
+}
+
+/* 宣傳區 */
+.promo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #676f9d;
+    padding: 20px;
+    position: relative;
+    border-radius: 40px;
+}
+
+/* 動態廣告樣式 */
+.ad-banner {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ad-slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.ad-slide {
+    width: 100%;
+    height: 80%;
+    display: none;
+}
+
+/*廣告照片大小*/
+.ad-slide.active {
+    width: 1200px;
+    height: 600px;
+    display: block;
+}
+
+/* 左右切換按鈕 */
+.ad-prev,
+.ad-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 1.5em;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.ad-prev {
+    left: 10px;
+}
+
+.ad-next {
+    right: 10px;
+}
+
+.ad-prev:hover,
+.ad-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* 商品區 */
+.products {
+    height: 40%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.product {
+    width: 90%;
+    height: 90%;
+    background-color: #676f9d;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.product img {
+    width: 90%;
+    height: 300px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product_img {
+    width: 300px;
+    height: 300px;
+}
+
+/* 主容器區域使用Grid */
+.container {
+
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    /* 設置兩欄寬度比1:4 */
+    gap: 5%;
+    padding: 2.5% 5% 0px 5%;
+}
+
+/* 側邊欄廣告樣式 */
+.sidebar {
+    background-color: #424769;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 其他通用樣式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #424769;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.section {
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input,
+button {
+    padding: 10px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #f9b17a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+footer {
+    text-align: center;
+    padding: 6.5px;
+    background-color: #424769;
+    color: white;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 頁首樣式 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #242769;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* 漢堡選單樣式 */
+.hamburger-menu {
+    position: relative;
+}
+
+#menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+#dropdown-menu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #676f9d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* 垂直排列 */
+    gap: 10px;
+    /* 垂直項目之間的間距 */
+    padding: 10px;
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#dropdown-menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    /* 避免文字換行 */
+    text-align: left;
+    /* 將文字對齊到左側 */
+}
+
+#dropdown-menu a:hover {
+    background-color: #f9b17a;
+}
+
+/* 隱藏選單的樣式 */
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+/* 會員頭像 */
+.user-profile {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+#user-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cart-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.promo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.promo-item {
+    display: flex;
+    align-items: center;
+    background-color: #676f9d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promo-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.promo-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.promo-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.promo-content h2 {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.promo-content p {
+    font-size: 0.9em;
+    color: #fff;
+}
+
+/* 聯絡我們樣式 */
+.contact-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media-icons a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+.social-media-icons img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.social-media-icons img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 回頂部按鈕 */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #f9b17a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* 滑鼠懸停效果 */
+.back-to-top:hover {
+    background-color: #f9b17a;
+    transform: scale(1.1);
+}
+
+/* 滑動到頂部的平滑過渡效果 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 平均星數 */
+.average-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#average-stars {
+    color: #FFD700;
+    /* 金色星星 */
+    font-size: 1.5em;
+}
+
+#average-score {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* 評分星星 */
+.rating-stars {
+    display: flex;
+    gap: 5px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.rating-stars span {
+    color: #ccc;
+    /* 初始未選中顏色 */
+    transition: color 0.3s ease;
+}
+
+.rating-stars span.selected {
+    color: #FFD700;
+    /* 選中的金色 */
+}
+
+.rating-stars span:hover,
+.rating-stars span:hover~span {
+    color: #FFD700;
+    /* 滑鼠懸停顏色 */
+}
+
+
+/* 評論表單 */
+#review-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#review-form textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+#review-list {
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+}
+
+/* 評論列表 */
+.review-item {
+    margin-bottom: 20px;
+}
+
+.review-item .review-stars {
+    color: #FFD700;
+    font-size: 1.2em;
+}
+
+.review-item .review-user {
+    font-weight: bold;
+    color: #333;
+}
+
+.review-item .review-text {
+    color: #666;
+    margin-top: 5px;
+}
+
+/* 新增樣式 */
+
+.section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+#purchase-history,
+#review-history {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.history-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.history-item h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0 0 5px;
+}
+
+.history-item p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 5px 0;
+}
+
+/*信用卡結帳*/
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-section input[type="text"]::placeholder {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.checkout-item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.checkout-item p {
+    margin: 5px 0;
+}

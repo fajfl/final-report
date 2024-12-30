@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結帳頁面</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>嘻嘻樂器 - 結帳頁面</h1>
+    </header>
+
+    <main class="container">
+        <section class="cart-summary">
+            <h2>您的購物車</h2>
+            <div id="cart-details">
+                <!-- 動態生成商品明細 -->
+            </div>
+            <p><strong>總金額：</strong><span id="total-amount">$0</span></p>
+        </section>
+
+        <section class="payment-method">
+            <h2>選擇支付方式</h2>
+            <form id="payment-form">
+                <label>
+                    <input type="radio" name="payment" value="linepay"> LINE Pay
+                </label><br>
+                <label>
+                    <input type="radio" name="payment" value="convenience"> 便利商店貨到付款 (Family Mart, 7-11)
+                </label><br>
+                <label>
+                    <input type="radio" name="payment" value="creditcard"> 信用卡 (VISA & MasterCard)
+                </label>
+
+                <div id="linepay-section" class="payment-section hidden">
+                    <p>您將被重定向至 LINE Pay 頁面完成支付。</p>
+                </div>
+
+                <div id="convenience-section" class="payment-section hidden">
+                    <p>選擇便利商店：</p>
+                    <label>
+                        <input type="radio" name="store" value="familymart"> Family Mart
+                    </label><br>
+                    <label>
+                        <input type="radio" name="store" value="seveneleven"> 7-11
+                    </label>
+                </div>
+
+                <div id="creditcard-section" class="payment-section hidden">
+                    <label for="card-number"></label>
+                    <input type="text" id="card-number" placeholder="請輸入您的信用卡號碼" required>
+                    <label for="expiry-date"></label>
+                    <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                    <label for="cvc"></label>
+                    <input type="text" id="cvc" placeholder="CVC" required>
+                    <label for="address"></label>
+                    <input type="text" id="address" placeholder="請輸入寄送地址" required>
+                </div>
+
+                <button type="submit">提交訂單</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <h5>Copyright @ 2024 All rights reserved</h5>
+    </footer>
+
+    <script src="js.js"></script>
+    <script>
+        // 動態顯示支付方式相關表單
+        document.querySelectorAll('input[name="payment"]').forEach(input => {
+            input.addEventListener('change', () => {
+                document.querySelectorAll('.payment-section').forEach(section => {
+                    section.classList.add('hidden');
+                });
+                const selected = document.querySelector(`#${input.value}-section`);
+                if (selected) {
+                    selected.classList.remove('hidden');
+                }
+            });
+        });
+
+        // 提交表單邏輯
+        document.getElementById('payment-form').addEventListener('submit', event => {
+            event.preventDefault();
+            const selectedPayment = document.querySelector('input[name="payment"]:checked');
+            if (!selectedPayment) {
+                alert('請選擇支付方式！');
+                return;
+            }
+            if (selectedPayment.value === 'creditcard') {
+                const cardNumber = document.getElementById('card-number').value;
+                const visaMasterRegex = /^4[0-9]{12}(?:[0-9]{3})?$|^5[1-5][0-9]{14}$/;
+                if (!visaMasterRegex.test(cardNumber)) {
+                    alert('請輸入有效的 VISA 或 MasterCard 信用卡號！');
+                    return;
+                }
+            }
+            alert('訂單已成功提交！');
+        });
+    </script>
+</body>
+
+</html>

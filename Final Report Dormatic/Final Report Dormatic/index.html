@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <!-- 漢堡選單 -->
+        <div class="hamburger-menu">
+            <button id="menu-btn">☰</button>
+            <nav id="dropdown-menu" class="hidden">
+                <a href="index.html">首頁</a>
+                <a href="promo.html">促銷活動</a>
+                <a href="about.html">關於我們</a>
+                <a href="contact.html">聯絡我們</a>
+            </nav>
+        </div>
+
+        <!-- 頂部標題 -->
+        <h1>嘻嘻樂器</h1>
+
+        <!-- 樂器種類選單 -->
+        <nav class="nav1">
+            <a href="/Final Report Dormatic/products/products_list1.html">管樂器</a>
+            <a href="/Final Report Dormatic/products/products_list2.html">弦樂器</a>
+            <a href="/Final Report Dormatic/products/products_list3.html">打擊樂器</a>
+            <a href="/Final Report Dormatic/products/products_list4.html">配件</a>
+        </nav>
+
+        <!-- 頭像與購物車 -->
+        <div class="header-right">
+            <div class="user-profile">
+                <img id="user-avatar" src="Image/function/account.jfif" alt="會員頭像">
+            </div>
+            <div class="cart">
+                <a href="../Final Report Dormatic/cart.html">
+                    <img src="Image/function/shopping cart.png" alt="購物車" class="cart-icon">
+                    <span id="cart-count" class="cart-count"></span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <img style="width:300px;height: 1900px;" src="Image/ad/ad6.png" alt="">
+        </aside>
+        <main class="main-content">
+            <!-- 宣傳區 -->
+            <section id="header" class="promo">
+                <div class="ad-banner">
+                    <div class="ad-slides">
+                        <img src="Image/ad/ad1.jpg" alt="廣告 1" class="ad-slide active">
+                        <img src="Image/ad/ad2.jpg" alt="廣告 2" class="ad-slide">
+                        <img src="Image/ad/ad3.jpg" alt="廣告 3" class="ad-slide">
+                    </div>
+                    <button class="ad-prev">❮</button>
+                    <button class="ad-next">❯</button>
+                </div>
+            </section>
+            <!-- 商品區 -->
+            <section class="products">
+                <a href="../products/product_page/product_f_2.html">
+                    <div class="product">
+                        <img src="Image/Guitar/3.jfif" alt="商品圖片">
+                        <p>Yamaha F310</p>
+                    </div>
+                </a>
+                <a href="../products/product_page/product_f_1.html">
+                    <div class="product">
+                        <img src="Image/Guitar/5.jfif" alt="商品圖片">
+                        <p>Martin D28</p>
+                    </div>
+                </a>
+                <a href="../products/product_page/product_f_3.html">
+                    <div class="product">
+                        <img src="Image/Guitar/1.jfif" alt="商品圖片">
+                        <p>aNueNue M1</p>
+                    </div>
+                </a>
+                <a href="../products/product_page/product_d_2.html">
+                    <div class="product">
+                        <img src="Image/drum/2.jfif" alt="商品圖片">
+                        <p>初學者用非洲鼓</p>
+                    </div>
+                </a>
+                <a href="../products/product_page/product_d_5.html">
+                    <div class="product">
+                        <img src="Image/drum/5.jfif" alt="商品圖片">
+                        <p>專業級爵士鼓套裝</p>
+                    </div>
+                </a>
+                <a href="../products/product_page/product_d_4.html">
+                    <div class="product">
+                        <img src="Image/drum/4.jfif" alt="商品圖片">
+                        <p>中級電子鼓套裝</p>
+                    </div>
+                </a>
+            </section>
+        </main>
+    </div>
+
+    <a href="#header"><button class="back-to-top">TOP</button></a>
+
+    <footer>
+        <h5>Copyrgiht @ 2024 All rights reserved</h5>
+    </footer>
+
+    <!-- 引入JavaScript -->
+    <script src="js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品詳情</title>
+    <link rel="stylesheet" href="../../Final Report Dormatic/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <!-- 漢堡選單 -->
+        <div class="hamburger-menu">
+            <button id="menu-btn">☰</button>
+            <nav id="dropdown-menu" class="hidden">
+                <a href="../../Final Report Dormatic/index.html">首頁</a>
+                <a href="products.html">商品列表</a>
+                <a href="../../Final Report Dormatic/promo.html">促銷活動</a>
+                <a href="../../Final Report Dormatic/about.html">關於我們</a>
+                <a href="../../Final Report Dormatic/contact.html">聯絡我們</a>
+            </nav>
+        </div>
+
+        <!-- 頂部標題 -->
+        <h1>嘻嘻樂器</h1>
+
+        <!-- 樂器種類選單 -->
+        <nav class="nav1">
+            <a href="../products_list1.html">管樂器</a>
+            <a href="../products_list2.html">弦樂器</a>
+            <a href="../products_list3.html">打擊樂器</a>
+            <a href="../products_list4.html">配件</a>
+        </nav>
+        <!-- 頭像與購物車 -->
+        <div class="header-right">
+            <a href="../../Final Report Dormatic/profile.html">
+                <div class="user-profile">
+                    <img id="user-avatar" src="../../Final Report Dormatic/Image/function/account.jfif" alt="會員頭像">
+                </div>
+            </a>
+            <div class="cart">
+                <a href="../../Final Report Dormatic/cart.html">
+                    <img src="../../Final Report Dormatic/Image/function/shopping cart.png" alt="購物車" class="cart-icon">
+                    <span id="cart-count" class="cart-count"></span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <img style="width:300px;height: 1900px;" src="../../Final Report Dormatic/Image/ad/ad6.png" alt="">
+        </aside>
+        <main class="main-content">
+            <section class="product-detail">
+                <div class="product-image">
+                    <img class="product_img" src="../../Final Report Dormatic/Image/Chinese flute/5.png" alt="">
+                    <h2>中國笛G調</h2>
+                    <h3>$3800</h3>
+                    <div class="average-rating">
+                        <span id="average-stars">★★★★★</span>
+                        <span id="average-score">(0.0)</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <label for="quantity">數量：</label>
+                    <input type="number" id="quantity" min="1" value="1">
+                    <button class="add-to-cart" onclick="addToCart({
+                        id: 'product_g_1',
+                        name: '中國笛G調',
+                        price: 3800,
+                        quantity: parseInt(document.getElementById('quantity').value)
+                    })">>加入購物車</button>
+                </div>
+            </section>
+            <section class="description">
+                <h3>文字說明</h3>
+                <p>這款中國笛採用上等材料製作，工藝細緻，音色與音準表現極為出色。笛身由精選竹料製成，聲音清亮悅耳，易於吹奏且不費力，特別適合初學者使用。</p>
+            </section>
+            <section class="reviews">
+                <h3>評分與評論</h3>
+                <form id="review-form">
+                    <label>評分：</label>
+                    <div class="rating-stars" id="rating-stars">
+                        <span data-value="1">★</span>
+                        <span data-value="2">★</span>
+                        <span data-value="3">★</span>
+                        <span data-value="4">★</span>
+                        <span data-value="5">★</span>
+                    </div>
+                    <label for="review">評論：</label>
+                    <textarea id="review" placeholder="輸入您的評論"></textarea>
+                    <button type="submit">提交評論</button>
+                </form>
+                <div id="review-list">
+                    <!-- 評論列表將動態生成 -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <h5>Copyrgiht @ 2024 All rights reserved</h5>
+    </footer>
+    <script src="../../Final Report Dormatic/js.js"></script>
+</body>
+
+</html>
